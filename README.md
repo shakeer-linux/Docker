@@ -1,19 +1,19 @@
 ## Docker Installation Guide on UBUNTU 16.04 and CentOS/RHEL7.X
 
-### UBUNTU
-**Set up the repository:**
-#### Install packages to allow apt to use a repository over HTTPS
+#### UBUNTU
+##### Set up the repository:
+##### Install packages to allow apt to use a repository over HTTPS
 ```
 apt-get update && apt-get install -y \
   apt-transport-https ca-certificates curl software-properties-common gnupg2
   ```
 
-#### Add Docker’s official GPG key
+##### Add Docker’s official GPG key
 ```
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | apt-key add -
 ```
 
-#### Add Docker apt repository.
+##### Add Docker apt repository.
 ```
 add-apt-repository \
   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
@@ -21,7 +21,7 @@ add-apt-repository \
   stable"
   ```
 
-#### Install Docker CE.
+##### Install Docker CE.
 ```
 apt-get update && apt-get install -y \
   containerd.io=1.2.10-3 \
@@ -29,7 +29,7 @@ apt-get update && apt-get install -y \
   docker-ce-cli=5:19.03.4~3-0~ubuntu-$(lsb_release -cs)
   ```
 
-#### Setup daemon.
+##### Setup daemon.
 ```
 cat > /etc/docker/daemon.json <<EOF
 {
@@ -46,7 +46,7 @@ EOF
 mkdir -p /etc/systemd/system/docker.service.d
 ```
 
-#### Restart docker.
+##### Restart docker.
 ```
 systemctl daemon-reload
 systemctl restart docker
@@ -57,30 +57,30 @@ systemctl restart docker
 
 
 
-### CentOS/RHEL
-#### Set up the repository
-#### Install required packages.
+#### CentOS/RHEL
+##### Set up the repository
+##### Install required packages.
 ```
 yum install -y yum-utils device-mapper-persistent-data lvm2
 ```
 
-#### Add Docker repository.
+##### Add Docker repository.
 ```
 yum-config-manager --add-repo \
   https://download.docker.com/linux/centos/docker-ce.repo
 ```
-#### Install Docker CE.
+##### Install Docker CE.
 ```
 yum update -y && yum install -y \
   containerd.io-1.2.10 \
   docker-ce-19.03.4 \
   docker-ce-cli-19.03.4
 ```
-#### Create /etc/docker directory.
+##### Create /etc/docker directory.
 ```
 mkdir /etc/docker
 ```
-#### Setup daemon.
+##### Setup daemon.
 ```
 cat > /etc/docker/daemon.json <<EOF
 {
@@ -100,7 +100,7 @@ EOF
 mkdir -p /etc/systemd/system/docker.service.d
 ```
 
-#### Restart Docker
+##### Restart Docker
 ```
 systemctl daemon-reload
 systemctl restart docker
