@@ -45,7 +45,7 @@ systemctl restart docker
 
 
 
-### Install Docker CE On CentOS7/RHEL
+### CentOS/RHEL
 #### Set up the repository
 #### Install required packages.
 yum install -y yum-utils device-mapper-persistent-data lvm2
