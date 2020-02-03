@@ -1,6 +1,6 @@
 ## Docker Installation Guide on UBUNTU 16.04 and CentOS/RHEL7.X
 
-#### UBUNTU
+### UBUNTU
 ##### Set up the repository:
 ##### Install packages to allow apt to use a repository over HTTPS
 ```
@@ -57,7 +57,7 @@ systemctl restart docker
 
 
 
-#### CentOS/RHEL
+### CentOS/RHEL
 ##### Set up the repository
 ##### Install required packages.
 ```
