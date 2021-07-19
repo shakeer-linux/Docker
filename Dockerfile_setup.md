@@ -30,7 +30,8 @@ set docker_tls_verify=1
 ```
 
 
-**test: http://192.168.16.10:9090/index.html
+**test**:
+http://192.168.16.10:9090/index.html
 
 
 
@@ -63,5 +64,6 @@ port bindings of a specific container
 docker inspect [container-id]
 ```
 
-For troubleshooting: https://stackoverflow.com/questions/41208782/docker-localhost-process-not-working-on-windows .
+**For troubleshooting:**
+https://stackoverflow.com/questions/41208782/docker-localhost-process-not-working-on-windows .
 
