@@ -16,21 +16,21 @@ docker build -t angular-webpack .
 ```
 **run
 ```
-docker run -p 9000:80 -t angular-webpack
+docker run -p 9090:80 -t angular-webpack
 ```
 
-Note: this will create a container with the image "angular-webpack" and bind the container’s port 80 to the host machine’s port 9000. after the "docker run -p 9000:80 -it angular-webpack" command, the docker container runs on a linux virtual machine. so we can't run docker natively on windows or a mac. the following properties must be set:
+Note: this will create a container with the image "angular-webpack" and bind the container’s port 80 to the host machine’s port 9090. after the "docker run -p 9090:80 -it angular-webpack" command, the docker container runs on a linux virtual machine. so we can't run docker natively on windows or a mac. the following properties must be set:
 ```
 set environment properties
 set userprofile = c:\users\xxx  --> set your user proile 
 set docker_cert_path=%userprofile%\.docker\machine\machines\default
-set docker_host=tcp://192.168.99.100 --> find this ip in docker quick start terminal
+set docker_host=tcp://192.168.16.10 --> find this ip in docker quick start terminal
 set docker_machine_name=default
 set docker_tls_verify=1
 ```
 
 
-**test: http://192.168.99.100:9000/index.html
+**test: http://192.168.16.10:9090/index.html
 
 
 
