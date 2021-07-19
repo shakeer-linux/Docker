@@ -34,7 +34,7 @@ set docker_tls_verify=1
 
 
 
-++++++++++++++++++++++
+++++++++++++++++++++++    **Dockerfile Commands**    +++++++++++++++++++++++ 
 
 
 build docker image
