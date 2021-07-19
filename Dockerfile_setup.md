@@ -10,16 +10,18 @@ expose 80
 the dockerfile should be located in the root of the project. here is an example from my project:
 
 how to run the docker container on your local machine
-**build
+
+**build**
 ```
 docker build -t angular-webpack .
 ```
-**run
+
+**run**
 ```
 docker run -p 9090:80 -t angular-webpack
 ```
 
-Note: this will create a container with the image "angular-webpack" and bind the container’s port 80 to the host machine’s port 9090. after the "docker run -p 9090:80 -it angular-webpack" command, the docker container runs on a linux virtual machine. so we can't run docker natively on windows or a mac. the following properties must be set:
+**Note:** this will create a container with the image "angular-webpack" and bind the container’s port 80 to the host machine’s port 9090. after the "docker run -p 9090:80 -it angular-webpack" command, the docker container runs on a linux virtual machine. so we can't run docker natively on windows or a mac. the following properties must be set:
 ```
 set environment properties
 set userprofile = c:\users\xxx  --> set your user proile 
